@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function initialize()
+        {
+            flag = document.getElementById("FlagInput");
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function flagCorrect()
+        {
+            if (flag.value == "Stefan")
+            {
+                alert("Congratulations! Now move on to the next room!");
+                window.location.href = "room2.html";
+            }
+            else
+            {
+                alert("Incorrect");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
