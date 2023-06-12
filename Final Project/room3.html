@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+    <script>
+        function initialize()
+        {
+            flag = document.getElementById("FlagInput");
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function flagCorrect()
+        {
+            if (flag.value == "sfdu2ofdfa2")
+            {
+                alert("Congratulations! You solve all the challenges");
+                window.location.href = "room3.html";
+            }
+            else
+            {
+                alert("Incorrect");
+            }
+        }
+        
+        function showPopup()
+        {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup()
+        {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <h1>Challenge 3</h1>
+    <p>Here's the last challenge and its free range from here. Hack into the main computer to open the prison gate!</p>
+    <a href="bufferoverflow_1" download = "bufferoverflow_1">Download</a>
+    <div id="FlagArea">
+        <input type="text" id="FlagInput">
+        <button onclick= "flagCorrect();">Enter</button>
+    </div>
+    <button onclick="showPopup()">Hint</button>
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">x</span>
+        <p>Overflow the buffer?</p>
+    </div>
+</body>
+</html>
