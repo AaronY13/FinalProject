@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<script>
+    function initialize()
+    {
+        flag = document.getElementById("FlagInput");
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function flagCorrect()
+    {
+        if (flag.value == "Stefan")
+        {
+            alert("Congratulations! Now move on to the next room!");
+            window.location.href = "room3.html";
+        }
+        else
+        {
+            alert("Incorrect");
+        }
+    }
+
+    function showPopup()
+    {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup()
+    {
+      document.getElementById('popup').style.display = 'none';
+    }
+</script>
+<body onload="initialize();">
+    <h1>Challenge 2</h1>
+    <p>Below is an attachment of an email one of the prison guards sent. Can you name the corrupt guard that can help you escape?</p>
+    <a href="newPrisonClock.jpg" download = "newPrisonClock.jpg">Download</a>
+    <div id="FlagArea">
+        <input type="text" id="FlagInput">
+        <button onclick= "flagCorrect();">Enter</button>
+    </div>
+    <button onclick="showPopup()">Hint</button>
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">x</span>
+        <p>Check the hex of the image</p>
+    </div>
+</body>
+</html>
